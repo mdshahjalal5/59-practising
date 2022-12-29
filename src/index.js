@@ -1,13 +1,22 @@
+
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import UserContext from './components/UserContext';
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserContext>
+    <ToastContainer>
+    </ToastContainer>
+        <App />
+     
+    </UserContext>
   </React.StrictMode>
 );
 
